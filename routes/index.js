@@ -5,13 +5,6 @@ const add = require("../add");
 
 const router = new Router();
 
-router.get("/", (req, res) => {
-  res.json({
-    status: "success",
-    result: "Hello world"
-  })
-})
-
 router.get("/sum/:number1/:number2", (req, res) => {
   const {number1, number2} = req.params;
   if(number1 == null || number2 == null) {
